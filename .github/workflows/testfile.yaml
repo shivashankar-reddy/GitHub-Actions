@@ -1,0 +1,16 @@
+name: Create a file
+on : push 
+jobs: 
+    files:
+        runs-on: ubuntu-latest
+        steps:
+            - name: create a file
+              run: echo "creating a file" > file.txt
+            - name: display content
+              run: cat file.txt
+            - name: display date
+              run: date
+            - name: display all files
+              run: ls-lrth
+            - name: diplay present location
+              run: pwd

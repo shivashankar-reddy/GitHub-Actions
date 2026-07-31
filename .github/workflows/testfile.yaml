@@ -11,6 +11,6 @@ jobs:
             - name: display date
               run: date
             - name: display all files
-              run: ls-lrth
+              run: ls -lrth
             - name: diplay present location
               run: pwd

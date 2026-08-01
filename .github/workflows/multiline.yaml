@@ -1,0 +1,14 @@
+name: Testing Multi line run 
+on: workflow_dispatch
+jobs:
+    files:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Git checkout
+              uses: actions/checkout@v5
+            - name: Display data in file
+              run: |
+                cat devops.txt
+                date
+                chmod +x uptime.sh
+                ./uptime.sh

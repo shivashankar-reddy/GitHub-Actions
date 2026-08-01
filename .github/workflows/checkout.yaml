@@ -1,0 +1,12 @@
+name: Testing checkout
+os: workflow_dispatch
+jobs:
+    files:
+        runs-on: ubuntu-latest
+        steps:
+            -name: Git checkout
+             uses: actions/checkout@v7
+            -name: Display data in file
+             run: cat devops.txt
+            -name: display Date
+             run: date

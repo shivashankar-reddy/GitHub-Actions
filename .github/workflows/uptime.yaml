@@ -1,4 +1,4 @@
-name: Testing checkout
+name: Testing shell
 on: workflow_dispatch
 jobs:
     files:
@@ -10,5 +10,7 @@ jobs:
               run: cat devops.txt
             - name: display Date
               run: date
+            - name: change permission
+              run: chmod +x uptime.sh
             - name: execute the shell
               run: ./uptime.sh

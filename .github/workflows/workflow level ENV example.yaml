@@ -1,0 +1,23 @@
+name: workflow level ENV example
+
+on:
+  workflow_dispatch:
+env:
+     company: Siva IT
+     name: Siva
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    
+    steps:
+       - name: first step
+         run: echo "company is $company "
+       - name: next step
+         run: echo "name is $name"
+
+  another:
+    runs-on: ubuntu-latest
+    steps:
+       - name: step
+         run: echo "company is $company"
+        

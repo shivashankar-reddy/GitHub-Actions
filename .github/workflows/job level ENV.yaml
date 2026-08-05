@@ -1,4 +1,4 @@
-name: Step level Example
+name: job level ENV Example
 
 on:
   workflow_dispatch:

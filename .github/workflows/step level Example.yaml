@@ -1,20 +1,21 @@
 name: Step level Example
-on: workflow_dispatch
-jobs:
-    demo:
-        runs-on: ubuntu-latest
-        steps:
-            demo:
-              - name: sample env 
-              
-            env:
-                    city: Hyderabad
-                    name: Siva
-            run: |
-                   echo: "city is $city"
-                   echo: "name is $name"
-              - name: next step
-            run: 
-                echo: "city is $city and name is $name"
-                
 
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sample env
+        env:
+          CITY: Hyderabad
+          NAME: Siva
+        run: |
+          echo "City is $CITY"
+          echo "Name is $NAME"
+
+      - name: Next step
+        run: |
+          echo "City is $CITY and Name is $NAME"
